@@ -1,0 +1,23 @@
+{
+  "name": "zaobeschekibot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "dev": "nodemon ./src/index.js"
+  },
+  "engines": {
+    "node": "14.15.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "geolib": "^3.3.1",
+    "mongodb": "^3.6.4",
+    "mongoose": "^5.12.0",
+    "node-telegram-bot-api": "^0.51.0",
+    "nodemon": "^2.0.7"
+  }
+}
