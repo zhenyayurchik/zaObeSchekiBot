@@ -8,7 +8,7 @@ const kb = require("./keyboard-buttons");
 const keyboard = require("./keyboard");
 const { getChatId, getItemUuid } = require("./helper");
 const token = `${process.env.BOT_TOKEN}`;
-// const database = require("../database.json");
+const database = require("../database.json");
 
 require("./models/film.model");
 require("./models/cinema.model");
@@ -40,6 +40,7 @@ const ACTION_TYPE = {
 const bot = new TelegramBot(token, {
   polling: true,
 });
+
 bot.on("polling_error", console.log);
 bot.on("message", (msg) => {
   const chatId = getChatId(msg);
