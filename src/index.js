@@ -36,7 +36,7 @@ const ACTION_TYPE = {
 //   new Cinema(c).save().catch((e) => console.log("e", e))
 // );
 
-const bot = new TelegramBot(token, {
+const bot = new TelegramBot(`${token}`, {
   polling: true,
 });
 
