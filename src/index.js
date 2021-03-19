@@ -7,7 +7,7 @@ const _ = require("lodash");
 const kb = require("./keyboard-buttons");
 const keyboard = require("./keyboard");
 const { getChatId, getItemUuid } = require("./helper");
-const token = process.env.BOT_TOKEN;
+const token = `${process.env.BOT_TOKEN}`;
 // const database = require("../database.json");
 
 require("./models/film.model");
@@ -37,10 +37,10 @@ const ACTION_TYPE = {
 //   new Cinema(c).save().catch((e) => console.log("e", e))
 // );
 
-const bot = new TelegramBot(`${token}`, {
+const bot = new TelegramBot(token, {
   polling: true,
 });
-
+bot.on("polling_error", console.log);
 bot.on("message", (msg) => {
   const chatId = getChatId(msg);
   switch (msg.text) {
